@@ -36,7 +36,7 @@ LARGE_INTEGER freq,before,now;
 void limitFPS(i32 fps){
 	//Sleep(1) can take up to 1/64 of a second to return
 	double sec = 1.0/(double)fps;
-	while (sec > 1.0/62.0){
+	while (sec > 1.0/60.0){
 		QueryPerformanceCounter(&before);
 		Sleep(1);
 		QueryPerformanceCounter(&now);
